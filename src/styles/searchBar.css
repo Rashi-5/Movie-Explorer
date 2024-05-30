@@ -1,0 +1,45 @@
+.search-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+form {
+    position: relative;
+    margin: 0 2vw;
+    float: right;
+  }
+  
+  input[type="text"] {
+    width: 15vw;
+    padding: 0.8vw;
+    border: 0.1vw solid #ccc;
+    border-radius: 0.8vw;
+    margin-right: 1vw;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #00A7E1;
+    outline: none;
+  }
+  
+  button {
+    padding: 0.8vw 1vw;
+    background-color: #00A7E1;
+    color: white;
+    border: none;
+    border-radius: 0.8vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #007BA7;
+  }
+  
+  button:active {
+    background-color: #005F73;
+  }
+  

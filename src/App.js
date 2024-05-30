@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter} from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
+import Hamburger from './components/navbar/hamburger.js';
+import MovieCard from './components/movie-cards/moviecard';
+import Search from './components/pages/search';
+import Fav from './components/pages/fav';
+import Home from './components/pages/home';
+import SelectedCard from './components/movie-cards/selected-card.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Hamburger/>
+        <Routes>
+          <Route path="/" element={<Home />}> </Route>
+          <Route path="/card" element={<MovieCard />}> </Route>
+          <Route path="/search" element={<Search />}> </Route>
+          <Route path="/fav" element={<Fav />}> </Route>
+          <Route path="/detail-card" element={<SelectedCard />}> </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
