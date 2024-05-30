@@ -78,3 +78,13 @@ npm install axios
 npm install @reduxjs/toolkit
 npm install react-redux 
 npm install redux-persist
+
+### `Additional features`
+Implemented a home page and a navigation bar user effectiveness.
+
+### `approach and assumptions`
+Desktop Focus: Focused on ensuring a responsive design primarily for desktop users, considering the web-based nature of the application.
+Minimalistic Design: Opted for a clean and minimalistic UI design approach, aligning with the provided Figma design guidelines.
+React Hooks: Utilized React hooks, especially for state management and asynchronous operations, to maintain code readability and modularity.
+
+The approach prioritized functionality, usability, and a visually appealing interface while keeping the development process efficient and focused on meeting the specified requirements.
