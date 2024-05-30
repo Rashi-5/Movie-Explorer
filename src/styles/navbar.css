@@ -1,0 +1,61 @@
+.hamburger-menu{
+    position: relative;
+    display: flex;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+    border-radius: 2vw;
+}
+
+.menu ul{
+    display: inline;
+    list-style: none;
+    margin: 0;
+    padding: 2vw 2vw 2vw 3.5vw;
+}
+
+.menu li a{
+    text-decoration: none;
+    width: 5vw;
+}
+
+.menu li.active a{
+    border-bottom: solid #A9EFD1;
+}
+
+.menu li{
+    padding-top: 8vw;
+}
+
+.icon{
+    background-color: #A9EFD1;
+    border-radius: 3vw;
+    padding: 1vw;
+    width: 2vw;
+    transition: transform 0.3s ease; 
+}
+
+.icon:hover {
+    background-color: #98ECC7;
+    transform: scale(1.1);
+}
+
+.logo{
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+.logo-card{
+    display: flex;
+    flex-direction: row;
+    padding-left: 2vw;
+    gap: 0.5vw;
+    cursor: pointer;
+}
+
+.logo-card span{
+    font-family: fantasy;
+}
