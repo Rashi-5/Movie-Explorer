@@ -24,8 +24,7 @@ export default function Search() {
   }
   
   if (error) {
-    return <div>Error: {error.message || error} </div>;
-
+    return <div>Error : {error.message || error} </div>;
   }
   
   return (
