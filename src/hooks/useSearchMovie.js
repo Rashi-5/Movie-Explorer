@@ -5,18 +5,20 @@ const useSearchMovie = () => {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  let count = 0;
   //caching the function
   const searchMovies = useCallback (async (keyword) => {
    
     try {
-      const data = await searchMovie(keyword);
-      if(data.Response == 'False'){
-        setError(data.Error);
-      }
-      else{
-        setMovies(data.Search || []);
-      }
+        if(!(count <= 1) && keyword == 'undefined'){
+            const data = await searchMovie(keyword);
+            if(data.Response == 'False'){
+                setError(data.Error);
+            }
+            else{
+                setMovies(data.Search || []);
+            }
+        }
     } catch (err) {
       setError(err);
     } finally {
@@ -26,6 +28,7 @@ const useSearchMovie = () => {
 
 
   useEffect(() => {
+    count++;
     searchMovies();
   }, []);
 
