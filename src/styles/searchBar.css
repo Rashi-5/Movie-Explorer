@@ -6,9 +6,8 @@
 }
 
 form {
-    position: relative;
-    margin: 0 2vw;
-    float: right;
+    position: absolute;
+    margin-left: 60vw;
   }
   
   input[type="text"] {

@@ -10,7 +10,7 @@ const useSearchMovie = () => {
   const searchMovies = useCallback (async (keyword) => {
    
     try {
-        if(!(count <= 1) && keyword == 'undefined'){
+        // if(!(count <= 1) && keyword == 'undefined'){
             const data = await searchMovie(keyword);
             if(data.Response == 'False'){
                 setError(data.Error);
@@ -18,7 +18,7 @@ const useSearchMovie = () => {
             else{
                 setMovies(data.Search || []);
             }
-        }
+        // }
     } catch (err) {
       setError(err);
     } finally {
